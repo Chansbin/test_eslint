@@ -1,0 +1,31 @@
+{
+  "name": "babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "babel": "babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint src/** --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.6",
+    "@babel/plugin-transform-runtime": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "husky": "^8.0.3"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.23.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint src/** --fix"
+    }
+  }
+}
