@@ -6,7 +6,9 @@
   "scripts": {
     "babel": "babel src --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint src/** --fix"
+    "eslint": "eslint src/** --fix",
+    "c": "git-cz",
+    "version": "standard-version"
   },
   "keywords": [],
   "author": "",
@@ -16,9 +18,12 @@
     "@babel/core": "^7.23.6",
     "@babel/plugin-transform-runtime": "^7.23.6",
     "@babel/preset-env": "^7.23.6",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.56.0",
     "eslint-plugin-vue": "^9.19.2",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "standard-version": "^9.5.0"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.23.6"
@@ -26,6 +31,15 @@
   "husky": {
     "hooks": {
       "pre-commit": "eslint src/** --fix"
+    }
+  },
+  "standard-version": {
+    "changelogHeader": "所有项目的变更记录会记录在如下文件.\n",
+    "dryRun": true
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
     }
   }
 }
